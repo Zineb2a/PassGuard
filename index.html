@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PassGuard</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3c22080b59.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+  <section id="title">
+    <div class="container">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-light navbar-expand-lg " id="background-pass" style="background-color: orange; ">
+        <a class="navbar-logo"  href="">PassGuard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item">
+              <a class="nav-linke" href="#testimonials">Tips</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-linke" href="#footer">Extension</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 style="font-size:3rem; padding-top: 170px; text-align: center;">How secure is your password?</h1>
+          <div class="password-cracker" style="padding: 20px; padding-bottom: 80px">
+            <input type="password" id="user-input">
+            <br>
+            <div id="output"></div>
+            <br>
+            <button id="cracker-button" class="btn btn-secondary" onmouseover="showPassword()" onmouseout="hidePassword()">Show/Hide Password</button>
+            <button id="show-button" class="btn btn-secondary" onclick="estimateCrackTime()">Crack it</button>
+          </div>
+          <br>
+          
+
+
+         
+      
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    
+    <h2>Generate a new password</h2>
+    <p>Generate, save, and auto-fill your credentials with a more on all your devices with PassGuard.</p>
+
+    <div class="container">
+      <button class="btn btn-secondary" style="top:20px;"onclick="generatePassword()">Generate</button>
+      <div id="new-pass" style="font-family:'Montserrat', sans-serif; font-weight: bold; padding: 20px;"></div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h1 class="testimonial-text" style="color: #000;">Use a long password :</h1>
+        <h2> The longer the password, the harder it is to crack. Aim for a minimum of 12 characters, and consider using a passphrase with multiple words.</h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text"style="color: #000;">Use a mix of characters : </h1>
+        <h2>A good password should include a mix of uppercase and lowercase letters, numbers, and special characters. This makes it harder for an attacker to guess your password using a dictionary attack.</h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text"style="color: #000;">Avoid using personal information : </h1>
+        <h2>Avoid using personal information such as your name, date of birth, or phone number in your password. This information is often easy for an attacker to obtain and use in a dictionary attack.
+        </h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text"style="color: #000;">Avoid using common words or phrases :</h1>
+        <h2>Avoid using common words or phrases that can be found in a dictionary. This makes it easier for an attacker to use a dictionary attack to crack your password.</h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text"style="color: #000;">Use a unique password for each account :</h1>
+        <h2>It's important to use a unique password for each account. This way, if one password is compromised, the attacker will not have access to your other accounts.</h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text"style="color: #000;">Use a password manager : </h1>
+        <h2>A password manager can help you generate and store strong, unique passwords for all your accounts.</h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text" style="color: #000;">Regularly update your passwords :</h1>
+        <h2> It's a good practice to change your passwords regularly, at least every 3 to 6 months.
+        </h2>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="testimonial-text" style="color: #000;">Two-factor authentication :</h1>
+        <h2>Use two-factor authentication (2FA) when available. This adds an extra layer of security by requiring a second form of authentication (such as a code sent to your phone) in addition to your password.</h2>
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <!-- Pricing -->
+
+    <!-- Features -->
+
+  <section id="features">
+    
+    <h2>What makes a strong password ? </h2>
+    <p>A strong password is one that's either not easily guessed or not easily brute forced.</p>
+
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <div class=" feature-box col-lg-4 ">
+          <i class="fa-solid fa-ruler fa-4x"></i>
+          <h3  style="color: orange;">Long</h3>
+          <p>A strong password should be at least 12-14 characters long. </p>
+        </div>
+
+        <div class="feature-box col-lg-4 ">
+          <i class="fa-solid fa-puzzle-piece fa-4x"></i>
+          <h3  style="color: orange;">Complex</h3>
+          <p>A strong password should include a mix of uppercase and lowercase letters, numbers, and special characters. </p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="fa-solid fa-magnifying-glass fa-4x"></i>
+          <h3 style="color: orange;">Unpredictable</h3>
+          <p>A strong password should not be a common word or phrase that can be easily guessed.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ 
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3 style="font-size: 3.5rem;">Download Our Extension</h3>
+    <button class="btn btn-dark btn-lg dowload-button" type="button" href="https://chrome.google.com/webstore/category/extensions?hl=fr"><i class="fa-brands fa-chrome"></i>
+      Chrome</button>
+    <button class="btn btn-outline-light btn-lg dowload-button" type="button" href=""><i class="fa-brands fa-safari"></i>
+      UpComming</button>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+    <i class="fa-sharp fa-solid fa-envelope"></i>
+    <p></p>
+    <p>© Copyright PassGuard</p>
+
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
